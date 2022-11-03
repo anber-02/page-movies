@@ -1,0 +1,17 @@
+<div fxLayout="row wrap" fxLayoutAlign="space-around">
+    <div fxFlex="80">
+        <form (ngSubmit)="buscar()">
+            <mat-form-field class="input-search" appearance="outline">
+                <mat-label>Buscar pelicula</mat-label>
+                <input  type="text" name="busqueda" placeholder="El senior de los anillos" matInput [(ngModel)]="termino"/>
+            </mat-form-field>
+
+        </form>
+    </div>
+</div>
+
+<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around">
+    <app-card-movie [pelisCard]="pelis" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around">
+    </app-card-movie>
+</div>
+
